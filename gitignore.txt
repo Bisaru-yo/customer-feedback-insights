@@ -1,0 +1,16 @@
+# secrets
+.env
+*.pem
+*.key
+credentials*
+secrets*
+
+# data (never commit raw data)
+data/
+hearthwell_data_kit/
+*.zip
+
+# python / jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
