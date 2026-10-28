@@ -1,1 +1,1 @@
-# customer-feedback-insights
+# customer-feedback-insightsThis project is about cleaning data of hearthwell, assign sentiment tags to the customer feedbacks with LLM sentiment analysis. This will help analyst to help them do it manually.  
