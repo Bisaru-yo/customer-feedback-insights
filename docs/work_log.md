@@ -14,3 +14,13 @@ I ran a python code in databricks to check if it can touch Snowflake, AWS S3 and
 
 connection with my Claude anthropic without credentials. This was just a network test and it passed, that's  a difference between a network test and an authenticated call.
 
+
+
+\## Day 2, Block 1: First look at the data
+
+\*\*What I did:\*\* Opened one review file and one ticket file and compared them with the data dictionary.
+
+\*\*What I found:\*\* The dictionary was out of date. Reviews are a JSON array, not JSON Lines. Review text has HTML. Some customer\_id and product\_id values are missing even though the dictionary says always present. Ticket dates use at least two formats. Ticket text includes quoted email replies.
+
+\*\*Lesson:\*\* Trust the data, not the documentation. This was a sample of 1 day and 1 week, so every number needs checking across all files.
+
