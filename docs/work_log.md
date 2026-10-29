@@ -8,3 +8,9 @@ Using “Add folder” in the upload created doubled paths, which you fixed with
 
 A dry run printed nothing because the path had an extra reviews/. Your count checks (70 objects, 8,128,800 bytes) proved the fix worked.
 
+
+
+I ran a python code in databricks to check if it can touch Snowflake, AWS S3 and Anthropic API or not. It was just a test and I was surprised that it made
+
+connection with my Claude anthropic without credentials. This was just a network test and it passed, that's  a difference between a network test and an authenticated call.
+
