@@ -24,3 +24,15 @@ connection with my Claude anthropic without credentials. This was just a network
 
 \*\*Lesson:\*\* Trust the data, not the documentation. This was a sample of 1 day and 1 week, so every number needs checking across all files.
 
+
+
+\## Day 2, Block 2: Profiling the full dataset
+
+\*\*What I did:\*\* Loaded all 56 review files and 8 ticket files and measured duplicates, missing values, date formats, text problems, and broken links.
+
+\*\*What I found:\*\* 8.9% repeated review rows, 2.8% repeated tickets, three ticket date formats, one review file with text ratings, one ticket file with reordered columns, HTML in 6.6% of reviews, signatures and quoted replies in about 20% of tickets each.
+
+\*\*What went wrong:\*\* The loader failed with "No objects to concatenate" because my base path was wrong. glob returned zero files. I added an assert on the file count so it fails loudly.
+
+\*\*Lesson:\*\* Profile per file, not just the combined table. Column order and type differences disappear once files are merged.
+
